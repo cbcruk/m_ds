@@ -1,0 +1,61 @@
+:root {
+  --color-white: #fff;
+  --color-dark: #373737;
+  --color-yellow: #fed156;
+  --color-red6: #f95c32;
+  --color-green1: #bff5e8;
+  --color-green3: #73e8cc;
+  --color-green4: #4de2bf;
+  --color-green6: #00d6a3;
+  --color-green7: #00c193;
+  --color-blue6: #00b3ea;
+  --color-yellow3: #ffe395;
+  --color-yellow5: #ffd45b;
+  --color-yellow6: #ffcc3e;
+  --color-pink3: #ffb4cd;
+  --color-pink6: #ff76a4;
+  --color-violet3: #b593e5;
+  --color-violet4: #a175de;
+  --color-violet6: #793ad0;
+  --color-orange5: #ffb126;
+  --color-orange6: #ffa300;
+
+  --color-brand-cavendish: #ffe01b;
+  --color-brand-kale: #007c89;
+  --color-brand-peppercorn: #241c15;
+  --color-brand-peppercorn-65: rgba(36, 28, 21, 0.65);
+  --color-brand-peppercorn-30: rgba(36, 28, 21, 0.3);
+  --color-brand-peppercorn-15: rgba(36, 28, 21, 0.15);
+  --color-brand-parsnip: #efeeea;
+  --color-brand-pumpkin: #f25f25;
+  --color-brand-yam: #fbcfbd;
+  --color-brand-apricot: #e7b75f;
+  --color-brand-plum: #692340;
+  --color-brand-dragonfruit: #ff3ebf;
+  --color-brand-apple: #00c14e;
+  --color-brand-portobello: #b7a9a1;
+  --color-brand-cornflower: #c5dbf2;
+  --color-brand-cucumber: #d8eacc;
+  --color-brand-squash: #fbeeca;
+  --color-brand-radish: #f9e0fa;
+  --color-brand-coconut: #ffffff;
+  --color-brand-coconut-50: rgba(255, 255, 255, 0.5);
+  --color-brand-coconut-20: rgba(255, 255, 255, 0.2);
+  --color-brand-coconut-10: rgba(255, 255, 255, 0.1);
+  --color-brand-jasmine: #f6f6f4;
+  --color-brand-oyster: #403b3b;
+  --color-brand-tuna: #8c8c8c;
+  --color-brand-basmati: #dbd9d2;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
