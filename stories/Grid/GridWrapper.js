@@ -1,6 +1,7 @@
 // @ts-check
 /** @jsx h */
-import { h } from 'preact'
+/** @jsxFrag Fragment */
+import { h, Fragment } from 'preact'
 import { css } from 'emotion'
 
 /**
@@ -9,15 +10,14 @@ import { css } from 'emotion'
  */
 function GridWrapper({ children }) {
   return (
-    <div class={styles.wrapper}>
+    <Fragment>
       <h1 class={styles.title}>Grid sizes</h1>
       {children}
-    </div>
+    </Fragment>
   )
 }
 
 const styles = {
-  wrapper: css({}),
   title: css({
     fontSize: 28,
     fontWeight: 400,
