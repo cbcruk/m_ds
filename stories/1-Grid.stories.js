@@ -1,8 +1,7 @@
 // @ts-check
 /** @jsx h */
 import { h } from 'preact'
-import Grid, { GridDefinition } from './Grid'
-import GridWrapper from './Grid/GridWrapper'
+import Grid, { GridDefinition, GridWrapper } from './Grid'
 
 export default {
   title: 'Grid',
