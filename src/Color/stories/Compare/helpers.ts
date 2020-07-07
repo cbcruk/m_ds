@@ -1,11 +1,7 @@
-// @ts-check
 import chroma from 'chroma-js'
-import { COLORS } from '../constants'
+import { COLORS } from '../../constants'
 
-/**
- * @param {string} color
- */
-export default function getLevels(color) {
+export function getLevels(color: string) {
   const color1 = chroma(color).luminance()
   const result = [
     COLORS.brandColors.coconut.rgb,

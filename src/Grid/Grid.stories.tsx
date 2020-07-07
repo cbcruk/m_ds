@@ -1,11 +1,10 @@
-// @ts-check
-/** @jsx h */
-import { h } from 'preact'
-import Grid, { GridDefinition, GridWrapper } from './Grid'
+import * as React from 'react'
+import Grid from './Grid'
+import { GridWrapper, GridDefinition } from './stories'
 
 export default {
   title: 'Grid',
-  component: Grid,
+  component: Grid
 }
 
 export function Default() {

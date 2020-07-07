@@ -25,7 +25,7 @@ export const COLORS = {
       rgb: 'rgb(255,224,27)',
       hex: '#FFE01B',
       less: '@cavendish',
-      cmyk: 'cmyk(2%,8%,96%,0%)',
+      cmyk: 'cmyk(2%,8%,96%,0%)'
     },
     kale: {
       label: 'Kale',
@@ -33,7 +33,7 @@ export const COLORS = {
       hex: '#007C89',
       less: '@kale',
       cmyk: 'cmyk(87%,36%,41%,7%)',
-      invert: !0,
+      invert: true
     },
     peppercorn: {
       label: 'Peppercorn',
@@ -41,57 +41,57 @@ export const COLORS = {
       hex: '#241C15',
       less: '@peppercorn',
       cmyk: 'cmyk(71%,68%,66%,83%)',
-      invert: !0,
+      invert: true
     },
     peppercorn65: {
       label: 'Peppercorn-65',
       rgb: 'rgba(36,28,21,0.65)',
-      hex: 'N/A',
+      hex: null,
       less: '@peppercorn-fade--65',
-      cmyk: 'N/A',
-      invert: !0,
+      cmyk: null,
+      invert: true
     },
     peppercorn30: {
       label: 'Peppercorn-30',
       rgb: 'rgba(36,28,21,0.3)',
-      hex: 'N/A',
+      hex: null,
       less: '@peppercorn-fade--30',
-      cmyk: 'N/A',
+      cmyk: null
     },
     peppercorn15: {
       label: 'Peppercorn-15',
       rgb: 'rgba(36,28,21,0.15)',
-      hex: 'N/A',
+      hex: null,
       less: '@peppercorn-fade--15',
-      cmyk: 'N/A',
+      cmyk: null
     },
     parsnip: {
       label: 'Parsnip',
       rgb: 'rgb(239,238,234)',
       hex: '#EFEEEA',
       less: '@parsnip',
-      cmyk: 'cmyk(5%,4%,6%,0%)',
+      cmyk: 'cmyk(5%,4%,6%,0%)'
     },
     pumpkin: {
       label: 'Pumpkin',
       rgb: 'rgb(242,95,37)',
       hex: '#F25F25',
       less: '@pumpkin',
-      cmyk: 'cmyk(0%,78%,97%,0%)',
+      cmyk: 'cmyk(0%,78%,97%,0%)'
     },
     yam: {
       label: 'Yam',
       rgb: 'rgb(251,207,189)',
       hex: '#FBCFBD',
       less: '@yam',
-      cmyk: 'cmyk(0%,17%,24%,2%)',
+      cmyk: 'cmyk(0%,17%,24%,2%)'
     },
     apricot: {
       label: 'Apricot',
       rgb: 'rgb(231,183,95)',
       hex: '#E7B75F',
       less: '@apricot',
-      cmyk: 'cmyk(9%,28%,74%,0%)',
+      cmyk: 'cmyk(9%,28%,74%,0%)'
     },
     plum: {
       label: 'Plum',
@@ -99,91 +99,91 @@ export const COLORS = {
       hex: '#692340',
       less: '@plum',
       cmyk: 'cmyk(45%,92%,51%,39%)',
-      invert: !0,
+      invert: true
     },
     dragonfruit: {
       label: 'Dragonfruit',
       rgb: 'rgb(255,62,191)',
       hex: '#FF3EBF',
       less: '@dragonfruit',
-      cmyk: 'cmyk(5%,85%,0%,0%)',
+      cmyk: 'cmyk(5%,85%,0%,0%)'
     },
     apple: {
       label: 'Apple',
       rgb: 'rgb(0,193,78)',
       hex: '#00C14E',
       less: '@apple',
-      cmyk: 'cmyk(75%,0%,95%,0%)',
+      cmyk: 'cmyk(75%,0%,95%,0%)'
     },
     portobello: {
       label: 'Portobello',
       rgb: 'rgb(183,169,161)',
       hex: '#B7A9A1',
       less: '@portobello',
-      cmyk: 'cmyk(29%,31%,33%,0%)',
+      cmyk: 'cmyk(29%,31%,33%,0%)'
     },
     cornflower: {
       label: 'Cornflower',
       rgb: 'rgb(197,219,242)',
       hex: '#C5DBF2',
       less: '@cornflower',
-      cmyk: 'cmyk(21%,7%,0%,0%)',
+      cmyk: 'cmyk(21%,7%,0%,0%)'
     },
     cucumber: {
       label: 'Cucumber',
       rgb: 'rgb(216,234,204)',
       hex: '#D8EACC',
       less: '@cucumber',
-      cmyk: 'cmyk(16%,0%,24%,0%)',
+      cmyk: 'cmyk(16%,0%,24%,0%)'
     },
     squash: {
       label: 'Squash',
       rgb: 'rgb(251,238,202)',
       hex: '#FBEECA',
       less: '@squash',
-      cmyk: 'cmyk(1%,4%,23%,0%)',
+      cmyk: 'cmyk(1%,4%,23%,0%)'
     },
     radish: {
       label: 'Radish',
       rgb: 'rgb(249,224,250)',
       hex: '#F9E0FA',
       less: '@radish',
-      cmyk: 'cmyk(2%,13%,0%,0%)',
+      cmyk: 'cmyk(2%,13%,0%,0%)'
     },
     coconut: {
       label: 'Coconut',
       rgb: 'rgb(255,255,255)',
       hex: '#FFFFFF',
       less: '@coconut',
-      cmyk: 'cmyk(0%,0%,0%,0%)',
+      cmyk: 'cmyk(0%,0%,0%,0%)'
     },
     coconut50: {
       label: 'Coconut-50',
       rgb: 'rgba(255,255,255,0.5)',
-      hex: 'N/A',
+      hex: null,
       less: '@coconut-fade--50',
-      cmyk: 'N/A',
+      cmyk: null
     },
     coconut20: {
       label: 'Coconut-20',
       rgb: 'rgba(255,255,255,0.2)',
-      hex: 'N/A',
+      hex: null,
       less: '@coconut-fade--20',
-      cmyk: 'N/A',
+      cmyk: null
     },
     coconut10: {
       label: 'Coconut-10',
       rgb: 'rgba(255,255,255,0.1)',
-      hex: 'N/A',
+      hex: null,
       less: '@coconut-fade--10',
-      cmyk: 'N/A',
+      cmyk: null
     },
     jasmine: {
       label: 'Jasmine',
       rgb: 'rgb(246,246,244)',
       hex: '#F6F6F4',
       less: '@jasmine',
-      cmyk: 'cmyk(2%,1%,2%,0%)',
+      cmyk: 'cmyk(2%,1%,2%,0%)'
     },
     oyster: {
       label: 'Oyster',
@@ -191,22 +191,22 @@ export const COLORS = {
       hex: '#403B3B',
       less: '@oyster',
       cmyk: 'cmyk(65%,63%,61%,51%)',
-      invert: !0,
+      invert: true
     },
     tuna: {
       label: 'Tuna',
       rgb: 'rgb(140,140,140)',
       hex: '#8C8C8C',
       less: '@tuna',
-      cmyk: 'cmyk(47%,39%,40%,3%)',
+      cmyk: 'cmyk(47%,39%,40%,3%)'
     },
     basmati: {
       label: 'Basmati',
       rgb: 'rgb(219,217,210)',
       hex: '#DBD9D2',
       less: '@basmati',
-      cmyk: 'cmyk(13%,10%,15%,0%)',
-    },
+      cmyk: 'cmyk(13%,10%,15%,0%)'
+    }
   },
   dataViz: {
     combo1: {
@@ -215,46 +215,46 @@ export const COLORS = {
       color3: '#99c7ef',
       color4: '#fad173',
       color5: '#a3296e',
-      color6: '#4bc4C2',
+      color6: '#4bc4C2'
     },
     combo2: {
       color1: '#fad173',
       color2: '#99c7ef',
       color3: '#de4d14',
       color4: '#83249f',
-      color5: '#fa8cf8',
+      color5: '#fa8cf8'
     },
     combo3: {
       color1: '#fad173',
       color2: '#f97f50',
       color3: '#83249f',
       color4: '#99c7ef',
-      color5: '#f73bb9',
+      color5: '#f73bb9'
     },
     combo4: {
       color1: '#83249f',
       color2: '#f97f50',
       color3: '#fad173',
       color4: '#99e0d7',
-      color5: '#4277ce',
+      color5: '#4277ce'
     },
     combo5: {
       color1: '#4bc4c2',
       color2: '#fad173',
       color3: '#f97f50',
       color4: '#83249f',
-      color5: '#fa8cf8',
+      color5: '#fa8cf8'
     },
     combo6: {
       color1: '#d99536',
       color2: '#99c7ef',
       color3: '#a3296e',
       color4: '#de4d14',
-      color5: '#005733',
+      color5: '#005733'
     },
     flyover: {
       flagFill: 'rgba(36,28,21,0.90)',
-      poleFill: '#241c15',
-    },
-  },
+      poleFill: '#241c15'
+    }
+  }
 }

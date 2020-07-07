@@ -5,24 +5,34 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@emotion/core": "^10.0.28",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-typescript": "*",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.0.6",
     "chroma-js": "^2.1.0",
     "emotion": "^10.0.27",
     "lodash": "^4.17.15",
-    "preact": "^10.4.4"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preact": "^5.3.19",
-    "babel-loader": "^8.1.0"
+    "@types/chroma-js": "^2.0.0",
+    "@types/lodash": "^4.14.157",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5"
   }
 }
