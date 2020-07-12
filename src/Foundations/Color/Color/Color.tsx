@@ -3,10 +3,15 @@ import { cx, css } from 'emotion'
 import { ThemeProvider } from 'emotion-theming'
 import chroma from 'chroma-js'
 import Compare from '../Compare'
-import { Props } from './types'
 import styles from './style'
 
-const Color: React.FC<Props> = ({ label, color, hasBackground }) => {
+interface Props {
+  label: string
+  color: string
+  hasBackground?: boolean
+}
+
+const Color: React.FC<Props> = ({ label, color }: Props) => {
   const isDarken = chroma(color).luminance() < 0.5
 
   return (

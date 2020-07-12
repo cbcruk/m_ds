@@ -4,7 +4,7 @@ import styles from './style'
 const GridWrapper: React.FC = ({ children }) => {
   return (
     <>
-      <h1 className={styles.title}>Grid sizes</h1>
+      <h2 className={styles.title}>Grid sizes</h2>
       {children}
     </>
   )

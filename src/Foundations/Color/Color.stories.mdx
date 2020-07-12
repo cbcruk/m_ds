@@ -1,0 +1,63 @@
+import {
+  Meta,
+  Story,
+  ColorPalette,
+  ColorItem
+} from '@storybook/addon-docs/blocks'
+import Color from './Color'
+import Transparent from './Transparent'
+import { COLORS, GROUPS } from './constants'
+
+<Meta title="Foundations/Color" />
+
+# Color
+
+## Brand
+
+<Color
+  label={COLORS.brandColors.cavendish.label}
+  color={COLORS.brandColors.cavendish.hex}
+/>
+
+## Functional Colors
+
+<React.Fragment>
+  {GROUPS.functional.map(color => {
+    const { label, hex } = COLORS.brandColors[color]
+    return <Color key={label} label={label} color={hex} />
+  })}
+</React.Fragment>
+
+## Feedback Colors
+
+<React.Fragment>
+  {GROUPS.feedback.map(color => {
+    const { label, hex } = COLORS.brandColors[color]
+    return <Color key={label} label={label} color={hex} />
+  })}
+</React.Fragment>
+
+## Accent Colors
+
+<React.Fragment>
+  {GROUPS.accent.map(color => {
+    const { label, hex } = COLORS.brandColors[color]
+    return <Color key={label} label={label} color={hex} />
+  })}
+</React.Fragment>
+
+## Neutral Colors
+
+<React.Fragment>
+  {GROUPS.neutral.map(color => {
+    const { label, rgb, hex } = COLORS.brandColors[color]
+    const isTransparentMode = !hex
+    return React.createElement(
+      isTransparentMode ? Transparent : React.Fragment,
+      {
+        key: label
+      },
+      <Color key={label} label={label} color={hex || rgb} />
+    )
+  })}
+</React.Fragment>

@@ -1,5 +1,5 @@
 import { css } from 'emotion'
-import { Props } from './types'
+import { Props } from './Grid'
 
 const styles = {
   wrapper: css({
