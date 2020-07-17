@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import Button from './Button'
 import PaginationWrapper from '../Pagination'
@@ -11,7 +11,7 @@ export default {
   decorators: [withKnobs]
 }
 
-export const Default = () => {
+export function Default() {
   const isDisabled = boolean('Disabled', false)
   const isLoading = boolean('Loading', false)
 
@@ -33,7 +33,7 @@ export const Default = () => {
   )
 }
 
-export const Pagination = () => {
+export function Pagination() {
   return (
     <PaginationWrapper>
       <Button disabled>&lt;</Button>
@@ -42,11 +42,11 @@ export const Pagination = () => {
   )
 }
 
-export const Combo = () => {
+export function Combo() {
   return <ComboButton options={['Hoo hoo!', 'Eep eep!']} />
 }
 
-export const Group = () => {
+export function Group() {
   return (
     <>
       <Tabs
