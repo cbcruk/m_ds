@@ -27,28 +27,6 @@ const styles = {
       borderColor: 'var(--color-border-focus)',
       zIndex: 1
     }
-  }),
-  link: css({
-    color: 'rgba(36, 28, 21, 0.65)',
-    backgroundColor: 'transparent',
-    ':hover, :active, &.is-active': {
-      borderColor: 'transparent',
-      backgroundColor: 'transparent',
-      color: '#241c15'
-    },
-    ':focus': {
-      borderColor: 'transparent',
-      boxShadow: 'none'
-    }
-  }),
-  underline: css({
-    display: 'inline-flex',
-    alignItems: 'center',
-    borderBottom: '2px solid transparent',
-    height: '100%',
-    ':active, .is-active &': {
-      borderBottomColor: 'var(--color-border-focus)'
-    }
   })
 }
 

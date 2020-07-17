@@ -31,18 +31,14 @@ const Tabs: React.FC<Props> = ({
       {tabs.map(tab => (
         <Button
           key={tab.id}
+          isText={isNavs}
           className={cx({
-            [styles.link]: isNavs,
             [styles.button]: !isNavs,
             'is-active': state === tab.id
           })}
           onClick={() => dispatch(tab.id)}
         >
-          {isNavs ? (
-            <span className={styles.underline}>{tab.name}</span>
-          ) : (
-            tab.name
-          )}
+          {tab.name}
         </Button>
       ))}
     </div>

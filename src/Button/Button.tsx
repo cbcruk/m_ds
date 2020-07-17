@@ -1,6 +1,6 @@
-import * as React from 'react'
-import styles from './style'
+import React, { ReactNode, createElement } from 'react'
 import { cx } from 'emotion'
+import * as styles from './style'
 
 type Pattern = 'p0' | 'p1' | 'p2' | 'p3'
 
@@ -12,30 +12,33 @@ interface Props {
   className?: string
   pattern?: Pattern
   onClick?: () => void
+  children: ReactNode
 }
 
-const Button: React.FC<Props> = ({
+function Button({
   as = 'button',
   pattern,
   isText = false,
   isLoading = false,
   disabled,
-  className,
+  className = '',
+  children,
   ...props
-}: Props) => {
-  return React.createElement(as, {
-    ...props,
-    disabled: disabled || isLoading,
-    className: cx(
-      isText
-        ? styles.text
-        : [styles.variables, styles.wrapper, styles[pattern]],
-      {
-        [styles.loader]: isLoading
-      },
-      className
-    )
-  })
+}: Props) {
+  return createElement(
+    as,
+    {
+      ...props,
+      disabled: disabled || isLoading,
+      className: cx([styles.vars, styles[pattern]], {
+        [styles.link]: isText,
+        [styles.wrapper]: !isText,
+        [styles.loader]: isLoading,
+        [className]: true
+      })
+    },
+    isText ? <span className={styles.anchor}>{children}</span> : children
+  )
 }
 
 export default Button
