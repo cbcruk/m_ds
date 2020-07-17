@@ -1,35 +1,65 @@
-import React, { forwardRef, Ref } from 'react'
+import React from 'react'
+import Modal from 'react-modal'
+import noop from 'lodash/noop'
 import Button from '../Button'
 import * as styles from './style'
 
 interface Props {
   title: string
+  submitText?: string
+  cancelText?: string
   children: React.ReactNode
-  onDelete(): void
-  onCancel(): void
-  onClose(): void
+  isOpen: boolean
+  onSubmit?: () => void
+  onCancel?: () => void
+  handleClose(): void
 }
 
-function Dialog(props: Props, ref: Ref<HTMLDivElement>) {
-  const { title, children, onDelete, onCancel } = props
+function Dialog(props: Props) {
+  const {
+    title,
+    submitText,
+    cancelText = 'Cancel',
+    children,
+    isOpen = false,
+    onSubmit = noop,
+    onCancel = noop,
+    handleClose
+  } = props
 
   return (
-    <div ref={ref} className={styles.wrapper}>
-      <div className={styles.header}>
-        {title}
-        <Button className={styles.close}>X</Button>
+    <Modal isOpen={isOpen} style={styles.modal} onRequestClose={handleClose}>
+      <div className={styles.wrapper}>
+        <div className={styles.header}>
+          {title}
+          <Button className={styles.close} onClick={handleClose}>
+            X
+          </Button>
+        </div>
+        <div className={styles.body}>{children}</div>
+        <div className={styles.footer}>
+          <Button
+            pattern="p0"
+            onClick={() => {
+              onSubmit()
+              handleClose()
+            }}
+          >
+            {submitText}
+          </Button>
+          <Button
+            isText
+            onClick={() => {
+              onCancel()
+              handleClose()
+            }}
+          >
+            {cancelText}
+          </Button>
+        </div>
       </div>
-      <div className={styles.body}>{children}</div>
-      <div className={styles.footer}>
-        <Button pattern="p0" onClick={onDelete}>
-          Delete
-        </Button>
-        <Button isText onClick={onCancel}>
-          Cancel
-        </Button>
-      </div>
-    </div>
+    </Modal>
   )
 }
 
-export default forwardRef<HTMLDivElement, Props>(Dialog)
+export default Dialog

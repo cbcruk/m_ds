@@ -22,12 +22,14 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-typescript": "*",
     "@storybook/react": "^5.3.19",
+    "@types/react-modal": "^3.10.6",
     "babel-loader": "^8.0.6",
     "chroma-js": "^2.1.0",
     "emotion": "^10.0.27",
     "lodash": "^4.17.15",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-modal": "^3.11.2",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
