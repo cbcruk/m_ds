@@ -2,7 +2,7 @@ import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import Button from './Button'
 import PaginationWrapper from '../Pagination'
-import ComboButton from './ComboButton'
+import ComboButton from '../ComboButton'
 import Tabs from '../Tabs'
 
 export default {

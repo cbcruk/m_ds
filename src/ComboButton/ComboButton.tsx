@@ -1,7 +1,7 @@
 import React from 'react'
 import useButton, { StateType } from './hooks/useButton'
-import ComboSelect from './ComboSelect'
 import ComboButtonContext from './context'
+import ComboSelect from './ComboSelect'
 import ComboButtonGroup from './ComboButtonGroup'
 import ComboWrapper from './ComboWrapper'
 

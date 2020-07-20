@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Button from '../Button'
+import Button from '../Button/Button'
 import { SET_VALUE } from './hooks/useButton'
 import ComboButtonContext from './context'
 import styles from './style'

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ChevronDownIcon } from '@primer/octicons-react'
-import Button from '../Button'
+import Button from '../Button/Button'
 import { SHOW_SELECT } from './hooks/useButton'
 import ComboButtonContext from './context'
 import styles from './style'
