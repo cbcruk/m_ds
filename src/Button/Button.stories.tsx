@@ -3,7 +3,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import Button from './Button'
 import PaginationWrapper from '../Pagination'
 import ComboButton from '../ComboButton'
-import Tabs from '../Tabs'
+import Tabs from '../ButtonGroup'
 
 export default {
   title: 'Buttons',
