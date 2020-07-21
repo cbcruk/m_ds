@@ -35,7 +35,8 @@ function Button({
         [styles.wrapper]: !isText,
         [styles.loader]: isLoading,
         [className]: true
-      })
+      }),
+      'data-testid': 'Button'
     },
     isText ? <span className={styles.anchor}>{children}</span> : children
   )
