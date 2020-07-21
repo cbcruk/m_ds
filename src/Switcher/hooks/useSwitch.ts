@@ -3,55 +3,39 @@ import useOnClickOutside from './useOnClickOutside'
 
 export const SHOW_SELECT = 'SHOW_SELECT'
 export const HIDE_SELECT = 'HIDE_SELECT'
-export const SET_VALUE = 'SET_VALUE'
 
 export type StateType = {
-  showCombo: boolean
-  options: string[]
-  value: string
+  showSelect: boolean
 }
 
 type ShowOrHideSelectAction = {
   type: typeof SHOW_SELECT | typeof HIDE_SELECT
 }
 
-type SetValueAction = {
-  type: typeof SET_VALUE
-  payload: string
-}
-
-export type ActionType = ShowOrHideSelectAction | SetValueAction
+export type ActionType = ShowOrHideSelectAction
 
 export const initialState = {
-  showCombo: false,
-  options: [],
-  value: ''
+  showSelect: false
 }
 
-function reducer(state, action) {
+function reducer(state: StateType, action: ActionType) {
   switch (action.type) {
     case SHOW_SELECT:
       return {
         ...state,
-        showCombo: true
+        showSelect: true
       }
     case HIDE_SELECT:
       return {
         ...state,
-        showCombo: false
-      }
-    case SET_VALUE:
-      return {
-        ...state,
-        showCombo: false,
-        value: action.payload
+        showSelect: false
       }
     default:
       return state
   }
 }
 
-function useButton(defaultValues?: Partial<StateType>) {
+function useSwitch(defaultValues?: Partial<StateType>) {
   const ref = useRef()
   const [state, dispatch] = useReducer<Reducer<StateType, ActionType>>(
     reducer,
@@ -62,7 +46,7 @@ function useButton(defaultValues?: Partial<StateType>) {
   )
 
   useOnClickOutside(ref, () => {
-    if (state.showCombo) {
+    if (state.showSelect) {
       dispatch({
         type: HIDE_SELECT
       })
@@ -76,4 +60,4 @@ function useButton(defaultValues?: Partial<StateType>) {
   }
 }
 
-export default useButton
+export default useSwitch

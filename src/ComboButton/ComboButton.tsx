@@ -1,25 +1,61 @@
 import React from 'react'
-import useButton, { StateType } from './hooks/useButton'
-import ComboButtonContext from './context'
-import ComboSelect from './ComboSelect'
-import ComboButtonGroup from './ComboButtonGroup'
-import ComboWrapper from './ComboWrapper'
+import { ChevronDownIcon } from '@primer/octicons-react'
+import Button from '../Button'
+import Switcher, { SHOW_SELECT, HIDE_SELECT } from '../Switcher'
+import useCombo, { SET_VALUE } from './hooks/useCombo'
+import * as styles from './style'
 
-type Props = Partial<StateType>
+interface Props {
+  options: string[]
+}
 
-const ComboButton: React.FC<Props> = ({ options }: Props) => {
-  const { ref, state, dispatch } = useButton({
-    value: 'Default',
-    options
-  })
+function ComboButton({ options }: Props) {
+  const { state: comboState, dispatch: comboDispatch } = useCombo()
 
   return (
-    <ComboButtonContext.Provider value={{ state, dispatch }}>
-      <ComboWrapper ref={ref}>
-        <ComboButtonGroup />
-        <ComboSelect />
-      </ComboWrapper>
-    </ComboButtonContext.Provider>
+    <Switcher>
+      {({ state: switchState, dispatch: switchDispatch }) => (
+        <div className={styles.wrapper}>
+          <Button as="span">{comboState.value}</Button>
+
+          <Button
+            className={styles.button}
+            onClick={() => {
+              if (!switchState.showSelect) {
+                switchDispatch({
+                  type: SHOW_SELECT
+                })
+              }
+            }}
+          >
+            <ChevronDownIcon size={16} />
+          </Button>
+
+          {switchState.showSelect && (
+            <div className={styles.select}>
+              {options.map((option, index) => (
+                <Button
+                  key={index}
+                  isText
+                  className={styles.option}
+                  onClick={() => {
+                    comboDispatch({
+                      type: SET_VALUE,
+                      payload: option
+                    })
+                    switchDispatch({
+                      type: HIDE_SELECT
+                    })
+                  }}
+                >
+                  {option}
+                </Button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </Switcher>
   )
 }
 
