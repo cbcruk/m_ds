@@ -19,8 +19,6 @@ const Tabs: React.FC<Props> = ({
   active = '',
   isNavs = false
 }: Props) => {
-  const [state, dispatch] = useReducer((_, action) => action, active)
-
   return (
     <div
       className={cx({
@@ -34,9 +32,8 @@ const Tabs: React.FC<Props> = ({
           isText={isNavs}
           className={cx({
             [styles.button]: !isNavs,
-            'is-active': state === tab.id
+            'is-active': active === tab.id
           })}
-          onClick={() => dispatch(tab.id)}
         >
           {tab.name}
         </Button>

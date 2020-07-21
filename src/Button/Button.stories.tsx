@@ -56,6 +56,7 @@ export function Group() {
           { id: 'tablet', name: 'Tablet' },
           { id: 'phone', name: 'Phone' }
         ]}
+        active="desktop"
       />
       <Tabs
         tabs={[
@@ -64,6 +65,7 @@ export function Group() {
           { id: 'phone', name: 'Phone' }
         ]}
         isNavs
+        active="desktop"
       />
     </>
   )
