@@ -1,5 +1,6 @@
 import React, { Dispatch, ReactNode } from 'react'
 import useSwitch, { StateType, ActionType } from './hooks/useSwitch'
+import { css } from 'emotion'
 
 interface Props {
   children: ({
@@ -11,11 +12,13 @@ interface Props {
   }) => ReactNode
 }
 
+const wrapper = css``
+
 function Switcher({ children }: Props) {
   const { ref, state, dispatch } = useSwitch()
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className={wrapper}>
       {children({
         state,
         dispatch

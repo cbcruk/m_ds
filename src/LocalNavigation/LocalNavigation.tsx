@@ -1,13 +1,15 @@
 import React, { Children, cloneElement, ReactElement } from 'react'
-import styles from '../Pagination/style'
+import * as styles from './style'
+import { cx } from 'emotion'
 
 interface Props {
   children: ReactElement[]
+  className?: HTMLElement['className']
 }
 
-function LocalNavigation({ children }: Props) {
+function LocalNavigation({ children, className }: Props) {
   return (
-    <nav className={styles.wrapper}>
+    <nav className={cx([styles.wrapper, className])}>
       {Children.map(children, child => {
         return <span className={styles.item}>{cloneElement(child)}</span>
       })}

@@ -3,13 +3,14 @@ import useOnClickOutside from './useOnClickOutside'
 
 export const SHOW_SELECT = 'SHOW_SELECT'
 export const HIDE_SELECT = 'HIDE_SELECT'
+export const TOGGLE_SELECT = 'TOGGLE_SELECT'
 
 export type StateType = {
   showSelect: boolean
 }
 
 type ShowOrHideSelectAction = {
-  type: typeof SHOW_SELECT | typeof HIDE_SELECT
+  type: typeof SHOW_SELECT | typeof HIDE_SELECT | typeof TOGGLE_SELECT
 }
 
 export type ActionType = ShowOrHideSelectAction
@@ -29,6 +30,11 @@ function reducer(state: StateType, action: ActionType) {
       return {
         ...state,
         showSelect: false
+      }
+    case TOGGLE_SELECT:
+      return {
+        ...state,
+        showSelect: !state.showSelect
       }
     default:
       return state

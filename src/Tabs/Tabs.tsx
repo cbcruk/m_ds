@@ -1,5 +1,7 @@
 import React, { ReactNode, useReducer } from 'react'
+import { cx } from 'emotion'
 import * as styles from './style'
+import LocalNavigation from '../LocalNavigation'
 
 interface Props {
   tabs: string[]
@@ -12,15 +14,27 @@ function Tabs({ tabs, activeIndex = 0, children }: Props) {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.tabs}>
+      <LocalNavigation className={cx(['is-tabs', styles.tabs])}>
         {tabs.map((tab, index) => (
-          <button key={index} onClick={() => dispatch(index)}>
+          <a
+            key={index}
+            href="#Tabs_body"
+            className={cx({
+              'is-active': index === state
+            })}
+            onClick={e => {
+              e.preventDefault()
+              dispatch(index)
+            }}
+          >
             {tab}
-          </button>
+          </a>
         ))}
-      </div>
+      </LocalNavigation>
 
-      <div className={styles.body}>{children(state)}</div>
+      <div id="Tabs_body" className={styles.body}>
+        {children(state)}
+      </div>
     </div>
   )
 }

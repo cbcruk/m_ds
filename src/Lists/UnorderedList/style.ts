@@ -16,6 +16,7 @@ export const item = css`
     padding-left: 12px;
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s;
 
     &:hover {
       background-color: #e6f2f3;

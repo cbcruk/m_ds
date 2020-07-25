@@ -1,5 +1,5 @@
 import React from 'react'
-import LocalNav from '../LocalNavigation'
+import LocalNavigation from '../LocalNavigation'
 import SwitchList from '../SwitchList'
 import TabsComponent from '../Tabs'
 
@@ -7,15 +7,21 @@ export default {
   title: 'Navigation'
 }
 
-export function LocalNavigation() {
+export function Local_Navigation() {
   return (
-    <LocalNav>
-      <a>Overview</a>
-      <a>Settings</a>
-      <a>Billing</a>
-      <a>Extras</a>
-      <a>Integrations</a>
-    </LocalNav>
+    <LocalNavigation>
+      <a href="#overview" className="is-active">
+        Overview
+      </a>
+      <SwitchList label="Settings">
+        <a href="#">List 1</a>
+        <a href="#">List 2</a>
+        <a href="#">List 3</a>
+      </SwitchList>
+      <a href="#billing">Billing</a>
+      <a href="#extras">Extras</a>
+      <a href="#integrations">Integrations</a>
+    </LocalNavigation>
   )
 }
 

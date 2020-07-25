@@ -77,13 +77,17 @@ const shape = css({
 
 export const wrapper = cx([base, shape])
 
-const text = css({
+export const text = css({
   border: 0,
   backgroundColor: 'transparent',
   color: 'rgba(36, 28, 21, 0.65)',
   fontFamily: 'inherit',
+  cursor: 'pointer',
   ':hover, :active, &.is-active': {
     color: 'var(--color-brand-peppercorn)'
+  },
+  ':focus': {
+    outline: 'none'
   }
 })
 
