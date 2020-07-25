@@ -63,3 +63,7 @@
 html {
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+body {
+  color: var(--color-brand-peppercorn);
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import * as styles from './style'
 
 interface Item {
   label: string
@@ -11,11 +12,11 @@ interface Props {
 
 function Leaders({ items }: Props) {
   return (
-    <ul>
+    <ul className={styles.wrapper}>
       {items.map((item, index) => (
-        <li key={index}>
-          <span>{item.label}</span>
-          <span>{item.value}</span>
+        <li key={index} className={styles.item}>
+          <span className={styles.label}>{item.label}</span>
+          <span className={styles.value}>{item.value}</span>
         </li>
       ))}
     </ul>

@@ -1,22 +1,29 @@
 import React from 'react'
 import { cx } from 'emotion'
+import * as styles from './style'
 
-type SeparatedType = 'dots' | 'spaces'
+export enum Separated {
+  Dots = 'dots',
+  Spaces = 'spaces'
+}
 
 interface Props {
   items: string[]
-  separated: SeparatedType
+  separated: Separated
 }
 
 function Linear({ items, separated }: Props) {
   return (
     <ul
       className={cx({
+        [styles.wrapper]: true,
         [`is-${separated}`]: true
       })}
     >
       {items.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index} className={styles.item}>
+          {item}
+        </li>
       ))}
     </ul>
   )

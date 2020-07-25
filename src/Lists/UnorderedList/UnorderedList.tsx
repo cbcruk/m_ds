@@ -1,4 +1,5 @@
 import React, { Children, cloneElement, ReactElement } from 'react'
+import * as styles from './style'
 
 interface Props {
   children: ReactElement[]
@@ -6,9 +7,9 @@ interface Props {
 
 function UnorderedList({ children }: Props) {
   return (
-    <ul>
+    <ul className={styles.wrapper}>
       {Children.map(children, child => {
-        return <li>{cloneElement(child)}</li>
+        return <li className={styles.item}>{cloneElement(child)}</li>
       })}
     </ul>
   )
