@@ -13,7 +13,7 @@ function Tabs({ tabs, activeIndex = 0, children }: Props) {
   const [state, dispatch] = useReducer((_, action) => action, activeIndex)
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} data-testid="Tabs">
       <LocalNavigation className={cx(['is-tabs', styles.tabs])}>
         {tabs.map((tab, index) => (
           <a

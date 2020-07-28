@@ -10,12 +10,11 @@ interface Props {
 
 function Progress({ step, activeStepIndex }: Props) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} data-testid="Progress">
       {range(0, step).map(n => (
         <span
           key={n}
-          className={cx({
-            [styles.step]: true,
+          className={cx(styles.step, {
             'is-active': n === activeStepIndex
           })}
         >

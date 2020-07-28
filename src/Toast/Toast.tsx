@@ -16,6 +16,7 @@ function Toast({ isVisible, children }: Props) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           className={styles.wrapper}
+          data-testid="Toast"
         >
           {children}
         </motion.div>

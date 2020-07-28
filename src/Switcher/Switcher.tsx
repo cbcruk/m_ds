@@ -18,7 +18,7 @@ function Switcher({ children }: Props) {
   const { ref, state, dispatch } = useSwitch()
 
   return (
-    <div ref={ref} className={wrapper}>
+    <div ref={ref} className={wrapper} data-testid="Switcher">
       {children({
         state,
         dispatch

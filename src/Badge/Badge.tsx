@@ -3,14 +3,14 @@ import { cx } from 'emotion'
 import * as styles from './style'
 
 export enum Status {
-  default,
-  success,
-  warning,
-  error,
-  info,
-  new,
-  pro,
-  notification
+  Default = 'default',
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error',
+  Info = 'info',
+  New = 'new',
+  Pro = 'pro',
+  Notification = 'notification'
 }
 
 interface Props {
@@ -18,11 +18,12 @@ interface Props {
   children: ReactNode
 }
 
-function Badge({ status = Status.default, children }: Props) {
+function Badge({ status = Status.Default, children }: Props) {
   return (
     <span
+      data-testid="Badge"
       className={cx([styles.wrapper, styles.status], {
-        [`is-${Status[status]}`]: true
+        [`is-${status}`]: true
       })}
     >
       {children}
