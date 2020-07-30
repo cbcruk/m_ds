@@ -1,14 +1,20 @@
-import * as React from 'react'
-import styles from './style'
+import React, { ReactElement } from 'react'
+import * as styles from './style'
 
-const Pagination = ({ children }) => (
-  <div className={styles.wrapper}>
-    {React.Children.map(children, child => {
-      return React.cloneElement(child, {
-        className: styles.item
-      })
-    })}
-  </div>
-)
+interface Props {
+  children: ReactElement[]
+}
+
+function Pagination({ children }: Props) {
+  return (
+    <div className={styles.wrapper} data-testid="Pagination">
+      {React.Children.map(children, child => {
+        return React.cloneElement(child, {
+          className: styles.item
+        })
+      })}
+    </div>
+  )
+}
 
 export default Pagination
