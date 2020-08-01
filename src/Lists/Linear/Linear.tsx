@@ -19,9 +19,10 @@ function Linear({ items, separated }: Props) {
         [styles.wrapper]: true,
         [`is-${separated}`]: true
       })}
+      data-testid="Linear"
     >
       {items.map((item, index) => (
-        <li key={index} className={styles.item}>
+        <li key={index} className={styles.item} data-testid="Linear-item">
           {item}
         </li>
       ))}

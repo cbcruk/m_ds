@@ -15,7 +15,7 @@ function ComboButton({ options }: Props) {
   return (
     <Switcher>
       {({ state: switchState, dispatch: switchDispatch }) => (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} data-testid="ComboButton">
           <Button as="span">{comboState.value}</Button>
 
           <Button

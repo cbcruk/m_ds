@@ -19,7 +19,7 @@ const initialState = {
 
 function reducer(state: StateType, action: ActionType) {
   switch (action.type) {
-    case 'SET_VALUE':
+    case SET_VALUE:
       return {
         ...state,
         value: action.payload

@@ -1,7 +1,7 @@
-import React, { useReducer } from 'react'
-import Button from '../Button'
-import styles from './style'
+import React from 'react'
 import { cx } from 'emotion'
+import Button from '../Button'
+import * as styles from './style'
 
 interface Tab {
   id: string
@@ -14,17 +14,13 @@ interface Props {
   isNavs?: boolean
 }
 
-const Tabs: React.FC<Props> = ({
-  tabs,
-  active = '',
-  isNavs = false
-}: Props) => {
+function Tabs({ tabs, active = '', isNavs = false }: Props) {
   return (
     <div
-      className={cx({
-        [styles.wrapper]: true,
-        [styles.isNavs]: isNavs
+      className={cx([styles.wrapper], {
+        'is-navs': isNavs
       })}
+      data-testid="Tabs"
     >
       {tabs.map(tab => (
         <Button

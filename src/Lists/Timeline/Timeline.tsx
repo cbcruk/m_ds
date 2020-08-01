@@ -8,9 +8,13 @@ interface Props {
 
 function Timeline({ activityDate, children }: Props) {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.date}>{activityDate}</div>
-      <div className={styles.children}>{children}</div>
+    <div className={styles.wrapper} data-testid="Timeline">
+      <div className={styles.date} data-testid="Timeline-date">
+        {activityDate}
+      </div>
+      <div className={styles.children} data-testid="Timeline-children">
+        {children}
+      </div>
     </div>
   )
 }

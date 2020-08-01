@@ -12,9 +12,9 @@ interface Props {
 
 function Leaders({ items }: Props) {
   return (
-    <ul className={styles.wrapper}>
+    <ul className={styles.wrapper} data-testid="Leaders">
       {items.map((item, index) => (
-        <li key={index} className={styles.item}>
+        <li key={index} className={styles.item} data-testid="Leaders-item">
           <span className={styles.label}>{item.label}</span>
           <span className={styles.value}>{item.value}</span>
         </li>
