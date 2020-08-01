@@ -15,95 +15,109 @@ export const vars = css`
   --transition-button-duration: 0.2s;
 `
 
-export const base = css({
-  display: 'inline-flex',
-  alignItems: 'center',
-  height: 36,
-  paddingRight: 18,
-  paddingLeft: 18,
-  color: 'var(--color-font)',
-  fontWeight: 500,
-  fontSize: 14,
-  textTransform: 'capitalize',
-  whiteSpace: 'nowrap',
-  ':hover': {
-    cursor: 'pointer'
-  },
-  ':focus': {
-    outlineWidth: 0
-  },
-  ':disabled, .is-disabled': {
-    color: 'var(--color-font-disabled)',
-    pointerEvents: 'none'
-  }
-})
+export const base = css`
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding-right: 18px;
+  padding-left: 18px;
+  color: var(--color-font);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  white-space: nowrap;
 
-const shape = css({
-  borderWidth: 1,
-  borderStyle: 'solid',
-  borderColor: 'transparent',
-  borderRadius: 2,
-  backgroundColor: 'var(--color-background)',
-  textAlign: 'center',
-  userSelect: 'none',
-  transition: `
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline-width: 0px;
+  }
+
+  &:disabled,
+  .is-disabled {
+    color: var(--color-font-disabled);
+    pointer-events: none;
+  }
+`
+const shape = css`
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  background-color: var(--color-background);
+  text-align: center;
+  user-select: none;
+  transition: ${`
     background-color var(--transition-button-duration) ease-in-out 0s,
     opacity var(--transition-button-duration) ease-in-out 0s,
     border var(--transition-button-duration) ease-in-out 0s,
     box-shadow var(--transition-button-duration) ease-in-out 0s
-  `,
-  ':visited': {
-    color: 'var(--color-font-visited)'
-  },
-  ':hover': {
-    backgroundColor: 'var(--color-background-hover)',
-    color: 'var(--color-font-hover)'
-  },
-  ':focus': {
-    borderColor: 'var(--color-border-focus)',
-    boxShadow: `
+  `};
+
+  :visited {
+    color: var(--color-font-visited);
+  }
+
+  &:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-font-hover);
+  }
+
+  &:focus {
+    border-color: var(--color-border-focus);
+    box-shadow: ${`
       inset 0 0 0 1px var(--color-shadow-focus),
       inset 0 0 0 2px #fff
-    `
-  },
-  ':active, &.is-active': {
-    backgroundColor: 'var(--color-background-active)'
-  },
-  ':disabled': {
-    borderColor: 'var(--color-border-disabled)',
-    backgroundColor: 'transparent'
+    `};
   }
-})
+
+  &:active,
+  &.is-active {
+    background-color: var(--color-background-active);
+  }
+
+  &:disabled {
+    border-color: var(--color-border-disabled);
+    background-color: transparent;
+  }
+`
 
 export const wrapper = cx([base, shape])
 
-export const text = css({
-  border: 0,
-  backgroundColor: 'transparent',
-  color: 'rgba(36, 28, 21, 0.65)',
-  fontFamily: 'inherit',
-  cursor: 'pointer',
-  ':hover, :active, &.is-active': {
-    color: 'var(--color-brand-peppercorn)'
-  },
-  ':focus': {
-    outline: 'none'
+export const text = css`
+  border: 0px;
+  background-color: transparent;
+  color: rgba(36, 28, 21, 0.65);
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &.is-active {
+    color: var(--color-brand-peppercorn);
   }
-})
+
+  &:focus {
+    outline: none;
+  }
+`
 
 export const link = cx([base, text])
 
-export const anchor = css({
-  display: 'flex',
-  alignItems: 'center',
-  height: '100%',
-  borderBottomWidth: 2,
-  borderBottomStyle: 'solid',
-  borderBottomColor: 'transparent',
-  '.is-active &': {
-    borderBottomColor: 'var(--color-border-focus)'
+export const anchor = css`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+
+  .is-active & {
+    border-bottom-color: var(--color-border-focus);
   }
-})
+`
 
 export const p0 = css`
   --color-border-focus: #004e56;
@@ -144,11 +158,11 @@ export const p2 = css`
   --color-font-disabled: #bdbbb9;
 `
 
-export const loader = css({
-  paddingLeft: 44,
-  backgroundImage: `url(${loaderLight})`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 20,
-  backgroundPositionX: 18,
-  backgroundPositionY: 'center'
-})
+export const loader = css`
+  padding-left: 44px;
+  background-image: ${`url(${loaderLight})`};
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position-x: 18px;
+  background-position-y: center;
+`

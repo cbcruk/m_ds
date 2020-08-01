@@ -1,17 +1,15 @@
 import { css } from 'emotion'
 import { Props } from './Grid'
 
-const styles = {
-  wrapper: css({
-    display: 'grid',
-    gridGap: 16,
-    padding: 15,
-    backgroundColor: '#bcdba8'
-  }),
-  repeat: (size: Props['size']) =>
-    css({
-      gridTemplateColumns: `repeat(${size}, 1fr)`
-    })
-}
+export const wrapper = css`
+  display: grid;
+  grid-gap: 16px;
+  padding: 15px;
+  background-color: #bcdba8;
+`
 
-export default styles
+export function repeat(size: Props['size']) {
+  return css`
+    grid-template-columns: ${`repeat(${size}, 1fr)`};
+  `
+}

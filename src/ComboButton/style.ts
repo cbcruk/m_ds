@@ -1,45 +1,48 @@
 import { css } from 'emotion'
 
-export const wrapper = css({
-  display: 'inline-flex',
-  position: 'relative'
-})
+export const wrapper = css`
+  display: inline-flex;
+  position: relative;
+`
 
-export const button = css({
-  justifyContent: 'center',
-  width: 43,
-  paddingRight: 0,
-  paddingLeft: 0,
-  marginLeft: 1
-})
+export const button = css`
+  justify-content: center;
+  width: 43px;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 1px;
+`
 
-export const select = css({
-  position: 'absolute',
-  top: '100%',
-  left: 0,
-  minWidth: 180,
-  borderWidth: 1,
-  borderStyle: 'solid',
-  borderColor: '#dedddc',
-  boxShadow: '0 1px 8px rgba(0, 0, 0, 0.2)',
-  marginTop: 5
-})
+export const select = css`
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  min-width: 180px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dedddc;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+`
 
-export const option = css({
-  display: 'flex',
-  alignItems: 'center',
-  width: '100%',
-  height: 48,
-  paddingRight: 18,
-  paddingLeft: 18,
-  ':hover': {
-    backgroundColor: '#e6f2f3'
-  },
-  ':active': {
-    backgroundColor: '#cce5e7'
-  },
-  ':disabled': {
-    opacity: 0.5,
-    backgroundColor: '#efeeea'
+export const option = css`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding-right: 18px;
+  padding-left: 18px;
+
+  :hover {
+    background-color: #e6f2f3;
   }
-})
+
+  :active {
+    background-color: #cce5e7;
+  }
+
+  :disabled {
+    opacity: 0.5;
+    background-color: var(--color-brand-parsnip);
+  }
+`
