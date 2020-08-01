@@ -66,13 +66,13 @@ export function Badges() {
   return (
     <>
       <Badge>Base</Badge>
-      <Badge status={BadgeStatus.success}>Success</Badge>
-      <Badge status={BadgeStatus.warning}>Warning</Badge>
-      <Badge status={BadgeStatus.error}>Error</Badge>
-      <Badge status={BadgeStatus.info}>Information</Badge>
-      <Badge status={BadgeStatus.new}>New!</Badge>
-      <Badge status={BadgeStatus.pro}>Pro</Badge>
-      <Badge status={BadgeStatus.notification}>1,234</Badge>
+      <Badge status={BadgeStatus.Success}>Success</Badge>
+      <Badge status={BadgeStatus.Warning}>Warning</Badge>
+      <Badge status={BadgeStatus.Error}>Error</Badge>
+      <Badge status={BadgeStatus.Info}>Information</Badge>
+      <Badge status={BadgeStatus.New}>New!</Badge>
+      <Badge status={BadgeStatus.Pro}>Pro</Badge>
+      <Badge status={BadgeStatus.Notification}>1,234</Badge>
     </>
   )
 }

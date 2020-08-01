@@ -1,7 +1,7 @@
 import React, { ReactNode, CSSProperties } from 'react'
-import { CheckCircleIcon, InfoIcon, SkipIcon } from '@primer/octicons-react'
 import { cx } from 'emotion'
 import Button from '../Button'
+import Icon from './Icon'
 import { Status } from './types'
 import * as styles from './style'
 
@@ -10,7 +10,7 @@ interface Action {
   handleClick(): void
 }
 
-interface Props {
+export interface Props {
   title?: string
   isSystem?: boolean
   status: Status
@@ -18,24 +18,6 @@ interface Props {
   theme?: CSSProperties
   media?: string
   children: ReactNode
-}
-
-interface IconProps {
-  status: Props['status']
-}
-
-function Icon({ status }: IconProps) {
-  switch (status) {
-    case Status.Success:
-      return <CheckCircleIcon size={16} />
-    case Status.Info:
-      return <InfoIcon size={16} />
-    case Status.Warning:
-    case Status.Error:
-      return <SkipIcon size={16} />
-    default:
-      return null
-  }
 }
 
 function Feedback({
@@ -52,7 +34,7 @@ function Feedback({
       className={cx(
         styles.wrapper,
         {
-          [styles.system]: isSystem
+          'is-system': isSystem
         },
         {
           'is-success': status === Status.Success,
@@ -64,16 +46,29 @@ function Feedback({
       style={{
         ...theme
       }}
+      data-testid="Feedback"
     >
       {media ? (
-        <img src={media} className={styles.media} />
+        <img
+          src={media}
+          className={styles.media}
+          data-testid="Feedback-media"
+        />
       ) : (
-        <Icon status={status} />
+        <Icon status={status} data-testid="Feedback-icon" />
       )}
-      <div className={styles.body}>
-        {title && <strong className={styles.title}>{title}</strong>}
-        <p className={styles.desc}>{children}</p>
+
+      <div className={styles.body} data-testid="Feedback-body">
+        {title && (
+          <strong className={styles.title} data-testid="Feedback-title">
+            {title}
+          </strong>
+        )}
+        <p className={styles.desc} data-testid="Feedback-desc">
+          {children}
+        </p>
       </div>
+
       {action && (
         <Button pattern="p0" onClick={action.handleClick}>
           {action.text}
