@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button'
 import Dialog from './Dialog'
-import { useModal, ActionTypes } from './hooks'
+import useModal, { ActionTypes } from './hooks/useModal'
 
 export default {
   title: 'Dialog',

@@ -30,7 +30,7 @@ function reducer(state: State, action: Action) {
   }
 }
 
-export function useModal() {
+function useModal() {
   const [state, dispatch] = useReducer<Reducer<State, Action>>(reducer, {
     isOpen: false
   })
@@ -49,3 +49,5 @@ export function useModal() {
     handleModal
   }
 }
+
+export default useModal

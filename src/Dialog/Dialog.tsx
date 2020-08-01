@@ -15,28 +15,33 @@ interface Props {
   handleClose(): void
 }
 
-function Dialog(props: Props) {
-  const {
-    title,
-    submitText,
-    cancelText = 'Cancel',
-    children,
-    isOpen = false,
-    onSubmit = noop,
-    onCancel = noop,
-    handleClose
-  } = props
-
+function Dialog({
+  title,
+  submitText,
+  cancelText = 'Cancel',
+  children,
+  isOpen = false,
+  onSubmit = noop,
+  onCancel = noop,
+  handleClose
+}: Props) {
   return (
-    <Modal isOpen={isOpen} style={styles.modal} onRequestClose={handleClose}>
-      <div className={styles.wrapper}>
-        <div className={styles.header}>
+    <Modal
+      isOpen={isOpen}
+      className={styles.modal}
+      onRequestClose={handleClose}
+      ariaHideApp={process.env.NODE_ENV !== 'test'}
+    >
+      <div className={styles.wrapper} data-testid="Dialog">
+        <div className={styles.header} data-testid="Dialog-header">
           {title}
           <Button className={styles.close} onClick={handleClose}>
             X
           </Button>
         </div>
-        <div className={styles.body}>{children}</div>
+        <div className={styles.body} data-testid="Dialog-body">
+          {children}
+        </div>
         <div className={styles.footer}>
           <Button
             pattern="p0"
