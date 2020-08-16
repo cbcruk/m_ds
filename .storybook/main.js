@@ -7,7 +7,7 @@ module.exports = {
         configureJSX: true,
       },
     },
-    '@storybook/addon-knobs/register',
+    '@storybook/addon-knobs',
     '@storybook/addon-actions',
     '@storybook/addon-links',
   ],
